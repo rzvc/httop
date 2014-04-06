@@ -31,9 +31,11 @@ It's a perl script, so it will obviously need perl. It needs the 'watch' and the
 Syntax
 ======
 
+```
 httop [-<1|2>]
 
 -1  List header and values, separated by tabs
 -2  List header and values, in a nice table formated with column -ts $'\t'
 
 With no option it starts running 'watch' on option -2
+```
