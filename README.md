@@ -13,6 +13,7 @@ Requirements
 First and foremost, it needs mod_status enabled with ExtendedStatus On.
 Example:
 
+```
 ExtendedStatus On
 
 <Location /server-status>
@@ -21,6 +22,7 @@ ExtendedStatus On
     Deny from all
     Allow from 127.0.0.1
 </Location>
+```
 
 
 It's a perl script, so it will obviously need perl. It needs the 'watch' and the 'column' command line tools as well, but chances are you already have them.
