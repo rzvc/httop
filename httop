@@ -28,7 +28,7 @@
 ##########################################
 
 my $status_url	= 'http://localhost/server-status';	# URL to the server-status
-my $look_for	= 'apache2';						# Name of the apache executable (so we can filter out the result from top)
+my $look_for	= 'httpd';						# Name of the apache executable (so we can filter out the result from top)
 
 
 my $top_cmd		= 'top -b -n1';						# The 'top' command that gives us a full list of the processes
@@ -118,7 +118,7 @@ while ($top =~ /^\s*(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+
 ################################################################
 # Merge the info we got from apache with what we got from top
 
-while ($status =~ /<tr><td><b>([^<]+)<\/b><\/td><td>(\d+)<\/td><td>([^<]+)<\/td><td>(?:<b>)?([^<]+)(?:<\/b>)?\s*<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)\s*<\/td><td>([^<]+)<\/td><td nowrap>([^<]+)<\/td><td nowrap>([^<]+)<\/td><\/tr>/g)
+while ($status =~ /<tr><td><b>([^<]+)<\/b><\/td><td>(\d+)<\/td><td>([^<]+)<\/td><td>(?:<b>)?([^<]+)(?:<\/b>)?\s*<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)\s*<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td>([^<]+)<\/td><td nowrap>([^<]+)<\/td><td nowrap>([^<]+)<\/td><\/tr>/g)
 {
 	my $pid = $2;
 
